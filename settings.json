@@ -1,0 +1,15 @@
+{
+  "Comments": "You can edit this file any time, the changes will be loaded immediately",
+  "database": "BBgit",
+  "user": "postgres",
+  "password": "postgres",
+  "ExecuteTimeInterval_Comment": "value in seconds",
+  "ExecuteTimeInterval": "5",
+  "OnlyDetectTablesAndViews_Comment": "If None, detect all tables/views; otherwise, only detect this list",
+  "OnlyDetectTablesAndViews": [
+  ],
+  "ExcludedTablesAndViews_Comment": "Will not detect content change for this list",
+  "ExcludedTablesAndViews": [
+    "table_xxx"
+  ]
+}
