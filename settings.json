@@ -1,6 +1,6 @@
 {
   "Comments": "You can edit this file any time, the changes will be loaded immediately",
-  "database": "BBgit",
+  "database": "mypostgresdb",
   "user": "postgres",
   "password": "postgres",
   "ExecuteTimeInterval_Comment": "value in seconds",
