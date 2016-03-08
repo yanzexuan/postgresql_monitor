@@ -192,6 +192,7 @@ def compareSnapshots(s1, s2):
 
 
 db_database = None
+db_port = None
 db_user = None
 db_password = None
 db_snapshorts =[]
@@ -205,9 +206,10 @@ def loadSettings():
         with open(path, 'r') as f:
             # read info from json
             settings = json.loads(f.read())
-            global db_database, db_user, db_password, OnlyDetectTablesAndViews, ExcludedTablesAndViews, ExecuteTimeInterval
-            db_database = db_user = db_password = OnlyDetectTablesAndViews = ExcludedTablesAndViews = ExecuteTimeInterval = None
+            global db_database, db_port, db_user, db_password, OnlyDetectTablesAndViews, ExcludedTablesAndViews, ExecuteTimeInterval
+            db_database = db_port = db_user = db_password = OnlyDetectTablesAndViews = ExcludedTablesAndViews = ExecuteTimeInterval = None
             db_database = settings["database"]
+            db_port = settings["port"]
             db_user = settings["user"]
             db_password = settings["password"]
             OnlyDetectTablesAndViews = settings["OnlyDetectTablesAndViews"] if settings.has_key("OnlyDetectTablesAndViews") else None
@@ -236,7 +238,7 @@ def do():
         dbSnapshot = DbSnapshot()
 
         #Create a database session
-        db_con = psycopg2.connect(database=db_database, user=db_user, password=db_password)
+        db_con = psycopg2.connect(database=db_database, user=db_user, password=db_password, port=db_port)
     
         #Create a client cursor to execute commands
         cursor = db_con.cursor()

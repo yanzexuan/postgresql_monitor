@@ -1,6 +1,7 @@
 {
   "Comments": "You can edit this file any time, the changes will be loaded immediately",
   "database": "mypostgresdb",
+  "port": 5432,
   "user": "postgres",
   "password": "postgres",
   "ExecuteTimeInterval_Comment": "value in seconds",
